@@ -37,6 +37,11 @@ function Navbar() {
                 Contacto
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/devolucion">
+                Devoluciones
+              </a>
+            </li>
           </ul>
           <form className="d-flex" role="search">
           <Searchbar/>

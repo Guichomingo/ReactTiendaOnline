@@ -78,6 +78,15 @@ export const Tabla = () => {
   }, [contadorCinco]);
 
   return (
+    <>
+    <div class="container-fluid"> 
+        <div class="row">
+                <div class="col-sm-12 d-flex justify-content-center">
+                    <h1 class="text-center">PRODUCTOS</h1>.
+            </div>
+        </div>
+    </div>
+    <hr></hr>
     <table class="table">
       <thead>
         <tr>
@@ -276,5 +285,6 @@ export const Tabla = () => {
         </tr>
       </tbody>
     </table>
+    </>
   );
 };
