@@ -5,20 +5,29 @@ import { useParams } from "react-router";
 
 function Info() {
   const { value } = useParams();
-  let [urlApi, setUrlApi] = useState(value);
-  let { fetchResponse } = useFetchApiImagen(value);
+  //let [urlApi, setUrlApi] = useState(value);
+  //let { fetchResponse } = useFetchApiImagen(value);
+  const [data, setData] = useState([]);
+
+  /*useEffect(() => {
+    setUrlApi(urlApi + value);
+  }, []);*/
 
   useEffect(() => {
-    setUrlApi(urlApi + value);
+    // Reemplaza 'data.json' con la ruta a tu archivo JSON
+    //fetch('https://fakestoreapi.com/products')
+    fetch("http://localhost:8080/products/" + value)
+      .then(response => response.json())
+      .then(jsonData => setData(jsonData))
+      .catch(error => console.error('Error:', error));
   }, []);
-
-  console.log(value);
 
   return (
     <>
       <div class="d-flex justify-content-center">
-        <Bloque nombre={"Producto " + value }imagenUrl={fetchResponse} />
+        <Bloque nombre={data.name} imagenUrl={data.imagen} precio={data.precio} descripcion={data.description}/>
       </div>
+
     </>
   );
 }

@@ -1,20 +1,27 @@
 import { useEffect, useState } from "react";
 
 export const useFetchApiImagen = (id) => {
+  const [fetchResponse, setFetchResponse] = useState("...");
 
-    const [fetchResponse, setFetchResponse] = useState('...');
+  useEffect(() => {
+    async function fetchRequest() {
+      var url = "http://localhost:8080/products/" + id;
+      const storedData =
+        (await fetch(url, {
+            method: "GET",
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS",
+          },
+        }).then((response) => {
+          JSON.parse(response.data);
+        })) || [];
+      setFetchResponse(storedData);
+    }
 
-    useEffect(() => {
+    fetchRequest();
+  }, [id]);
 
-        const fetchRequest = async () => {
-            let respuesta = await fetch("https://fakestoreapi.com/products/" + id);
-            let datos = await respuesta.json();
-            setFetchResponse(datos.image);   
-            console.log(datos.image);  
-        }
-
-        fetchRequest();
-    }, [id])
-
-    return {fetchResponse}
-}
+  return { fetchResponse };
+};

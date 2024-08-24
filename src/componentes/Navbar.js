@@ -28,20 +28,25 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/productos">
+              <a className="nav-link" href="/listaproductos">
                 Productos
               </a>
             </li>
             <li className="nav-item">
+              <a className="nav-link" href="/altaproducto">
+                Alta Producto
+              </a>
+            </li>
+            {/*<li className="nav-item">
               <a className="nav-link" href="/contacto">
                 Contacto
               </a>
-            </li>
-            <li className="nav-item">
+            </li>*/}
+            {/*<li className="nav-item">
               <a className="nav-link" href="/devolucion">
                 Devoluciones
               </a>
-            </li>
+            </li> */}
           </ul>
           <form className="d-flex" role="search">
           <Searchbar/>
