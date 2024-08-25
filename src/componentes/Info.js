@@ -16,7 +16,7 @@ function Info() {
   useEffect(() => {
     // Reemplaza 'data.json' con la ruta a tu archivo JSON
     //fetch('https://fakestoreapi.com/products')
-    fetch("http://localhost:8080/products/" + value)
+    fetch("https://products-production-33f4.up.railway.app/products/" + value)
       .then(response => response.json())
       .then(jsonData => setData(jsonData))
       .catch(error => console.error('Error:', error));
