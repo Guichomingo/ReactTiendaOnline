@@ -6,7 +6,7 @@ function Eliminar({ id }) {
 
   const handleDelete = ({ flag }) => {
     axios
-      .delete(`http://localhost:8080/products/${id}`)
+      .delete(`https://products-production-33f4.up.railway.app/products/${id}`)
       .then((response) => {
         window.location.reload();
       })

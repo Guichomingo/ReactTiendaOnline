@@ -6,7 +6,8 @@ function Productos() {
 
   useEffect(() => {
     //fetch('https://fakestoreapi.com/products') //API pública gratuita de ejemplo
-    fetch("http://localhost:8080/products")
+    //fetch("http://localhost:8080/products")
+    fetch("https://products-production-33f4.up.railway.app/products")
       .then((response) => response.json())
       .then((jsonData) => setData(jsonData))
       .catch((error) => console.error("Error:", error));

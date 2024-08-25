@@ -21,7 +21,7 @@ const PostProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:8080/products", {
+      const res = await fetch("https://products-production-33f4.up.railway.app/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -130,12 +130,12 @@ const PostProduct = () => {
                     </div>
                   </div>
                 </form>
-                {response && (
+                {/*response && (
                   <div class="alert alert-success" role="alert">
                     Producto guardado correctamente
                   </div>
-                )}
-                {/*{response && <div>Response: {JSON.stringify(response)}</div>} */}
+                )*/}
+                {response && <div>Response: {JSON.stringify(response)}</div>} 
               </div>
             </div>
           </div>
