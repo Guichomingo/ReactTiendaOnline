@@ -130,12 +130,13 @@ const PostProduct = () => {
                     </div>
                   </div>
                 </form>
-                response && (
+                {response && (
                   <div class="alert alert-success" role="alert">
-                    Producto guardado correctamente
+                    Producto guardado correctamente<br></br>
+                    {JSON.stringify(response)}
                   </div>
-                )
-                {/*{response && <div>Response: {JSON.stringify(response)}</div>} */}
+                )}
+                {/*response && <div>Response: {JSON.stringify(response)}</div>*/} 
               </div>
             </div>
           </div>
