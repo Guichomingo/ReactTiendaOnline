@@ -37,6 +37,11 @@ function Navbar() {
                 Alta Producto
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/productos">
+                Compras
+              </a>
+            </li>
             {/*<li className="nav-item">
               <a className="nav-link" href="/contacto">
                 Contacto
