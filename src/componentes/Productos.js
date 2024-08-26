@@ -14,6 +14,14 @@ function Productos() {
   }, []);
 
   return (
+    <>
+    <div class="container-fluid"> 
+        <div class="row">
+                <div class="col-sm-12 d-flex justify-content-center">
+                    <h1 class="text-center">PRODUCTOS</h1>.
+            </div>
+        </div>
+    </div>
     <table class="table">
       <thead>
         <tr>
@@ -56,6 +64,7 @@ function Productos() {
         ))}
       </tbody>
     </table>
+    </>
   );
 }
 
